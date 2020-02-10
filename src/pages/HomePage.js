@@ -8,6 +8,7 @@ import socialMedia from "../images/socialMedia.jpg"
 import blackSheepIcon from "../images/blacksheepIcon.jpeg"
 import whiterabbitIcon from "../images/whiterabbitIcon.jpeg"
 import manyMore from "../images/manyMore.png"
+import tripletwoIcon from "../images/tripletwoIcon.png"
 
 import { 
     Collapse, 
@@ -175,6 +176,15 @@ function HomePage() {
                                 <CardImg width="100%" src={whiterabbitIcon} style={{height:"130px", width:"auto", marginTop:"10px"}} />
                                 <CardBody>
                                     <CardTitle>The White Rabbit Oxford</CardTitle>
+                                </CardBody>
+                            </Card>
+                        </Col>
+
+                        <Col>
+                            <Card style={{borderRadius:"30px", alignItems:"center", background:"transparent", borderColor:"transparent"}}>
+                                <CardImg width="100%" src={tripletwoIcon} style={{height:"130px", width:"auto", marginTop:"10px"}} />
+                                <CardBody>
+                                    <CardTitle>Triple Two Coffee</CardTitle>
                                 </CardBody>
                             </Card>
                         </Col>
