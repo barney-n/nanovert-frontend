@@ -96,6 +96,18 @@ function HomePage() {
                 <Jumbotron style={{backgroundColor:"transparent", height:"100vh", width:"auto", paddingTop:"9%"}}>
                     <h1 className="display-3"><b>Get rewards for your Instagram stories!</b></h1>
                     <p >Connecting nano-influencers with local businesses.</p>
+                    <br/>
+                    <br/>
+                    <Button style={{
+                        backgroundColor:"black",  
+                        color:"white", 
+                        borderWidth:"3px", 
+                        borderColor:"white",
+                        }}>
+                            <h1>
+                                <a href="#signup" style={{textDecoration:"none", color:"white"}}>Sign up</a>
+                            </h1>
+                        </Button>
                 </Jumbotron>
 
             
@@ -188,7 +200,7 @@ function HomePage() {
                 <h1>Sign Up</h1>
                 <br/>
 
-                <Form onSubmit={handleSubmit} style={{width:"300px", margin:"auto", paddingBottom:"5%"}}>
+                <Form id="signup" onSubmit={handleSubmit} style={{width:"300px", margin:"auto", paddingBottom:"5%"}}>
                     <FormGroup>
                         <Label for="Username">Username</Label>
                         <InputGroup>
