@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory, Link } from "react-router-dom";
-import TextField from "@material-ui/core/TextField"
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Jumbotron, Button, Form, FormGroup, Label, Input, InputGroupAddon, InputGroupText, InputGroup } from 'reactstrap'
 
 
@@ -16,7 +15,7 @@ function VendorLoginPage() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        fetch("http://localhost:5000/vendor-login", {
+        fetch("https://nanovert-backend.herokuapp.com/vendor-login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
