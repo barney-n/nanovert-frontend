@@ -73,7 +73,7 @@ function HomePage() {
             else {
                 setErrorMessage("");
                 history.push("/");
-                alert("Signup successful. " + username + " has been added.");
+                alert("Signed Up! Remember to follow @nanovertuk on Instagram." + username + " has been added.");
                 window.location.reload(false);
             }
         });
