@@ -87,7 +87,7 @@ function HomePage() {
                     <Collapse isOpen={!collapsed} navbar>
                         <Nav navbar>
                         <NavItem>
-                            <NavLink tag={Link} to={"/vendor-home"} style={{color:"white", textAlign:"right"}}>nanovert Vendor</NavLink>
+                            <NavLink tag={Link} to={"/vendor-home"} style={{color:"white"}}>nanovert Vendor</NavLink>
                         </NavItem>
                         </Nav>
                     </Collapse>
@@ -97,13 +97,7 @@ function HomePage() {
                     <h1 className="display-3"><b>Get rewards for your Instagram stories!</b></h1>
                     <p >Connecting nano-influencers with local businesses.</p>
                     <br/>
-                    <br/>
-                    <Button style={{
-                        backgroundColor:"black",  
-                        color:"white", 
-                        borderWidth:"3px", 
-                        borderColor:"white",
-                        }}>
+                    <Button color="dark">
                             <h1>
                                 <a href="#signup" style={{textDecoration:"none", color:"white"}}>Sign up</a>
                             </h1>
