@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "nanovertCircle.ico",
+      "src": "nanovertCircle.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "nanovertCircle.ico",
+      "src": "nanovertCircle.png",
       "type": "image/png",
       "sizes": "512x512"
     }
