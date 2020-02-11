@@ -93,7 +93,7 @@ function HomePage() {
         backgroundColor: "black"
       }}
     >
-      <Navbar dark sticky="top" style={{ backgroundColor: "transparent" }}>
+      <Navbar dark sticky="top" style={{ backgroundColor: "black" }}>
         <NavbarBrand
           tag={Link}
           to={"/"}
