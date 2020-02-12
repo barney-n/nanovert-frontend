@@ -126,7 +126,7 @@ function HomePage() {
           paddingTop: "9%"
         }}
       >
-        <h1 className="display-3">
+        <h1>
           <b>Get rewards for your Instagram stories!</b>
         </h1>
         <p>Connecting nano-influencers with local businesses.</p>
