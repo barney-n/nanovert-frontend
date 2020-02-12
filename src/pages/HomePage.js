@@ -86,8 +86,6 @@ function HomePage() {
     <div
       style={{
         textAlign: "center",
-        background: `url(${restaurant})`,
-        backgroundSize: "auto 100vh",
         color: "white",
         backgroundRepeat: "no-repeat",
         backgroundColor: "black"
@@ -120,7 +118,9 @@ function HomePage() {
 
       <Jumbotron
         style={{
-          backgroundColor: "transparent",
+                  background: `url(${restaurant})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
           height: "100vh",
           width: "auto",
           paddingTop: "9%"
