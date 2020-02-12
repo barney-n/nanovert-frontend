@@ -102,24 +102,20 @@ function HomePage() {
         >
           nanovert
         </NavbarBrand>
-        <NavbarToggler
+        {/* <NavbarToggler
           onClick={toggleNavbar}
           className="mr-2"
           style={{ borderColor: "white" }}
         />
         <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar>
-            <NavItem>
-              <NavLink
-                tag={Link}
-                to={"/vendor-home"}
-                style={{ color: "white" }}
-              >
-                nanovert Vendor
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
+          <Nav navbar> */}
+        {/* <NavItem> */}
+        <NavLink tag={Link} to={"/vendor-home"} style={{ color: "white" }}>
+          nanovert Vendor
+        </NavLink>
+        {/* </NavItem> */}
+        {/* </Nav>
+        </Collapse> */}
       </Navbar>
 
       <Jumbotron
