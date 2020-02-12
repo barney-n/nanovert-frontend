@@ -433,7 +433,7 @@ function HomePage() {
           <FormGroup check>
             <Label check>
               <Input type="checkbox" /> I agree nanovert can share my data with
-              it's partners.
+              its partners.
             </Label>
           </FormGroup>
 
