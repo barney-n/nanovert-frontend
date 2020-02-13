@@ -131,6 +131,10 @@ function HomePage() {
         </h1>
         <p>Connecting nano-influencers with local businesses.</p>
         <br />
+        <div class="container">
+
+        
+        <div>
         <Button color="dark">
           <h1>
             <a
@@ -141,6 +145,12 @@ function HomePage() {
             </a>
           </h1>
         </Button>
+        <br />
+
+        
+        </div>
+  </div>
+
       </Jumbotron>
 
       <Jumbotron style={{ backgroundColor: "black", paddingTop: "0" }}>
@@ -159,7 +169,7 @@ function HomePage() {
             brands exposure and not just “influencers”. The idea is simple… all
             you have to do is post aesthetic instagram stories at local
             establishments, with a geo-tag for the business and you’ll be
-            rewarded with money and freebies.{" "}
+            rewarded with freebies and even money.{" "}
           </p>
           <br />
           <hr className="my-2" />
@@ -175,11 +185,14 @@ function HomePage() {
             For businesses, we believe 100 nano-influencers can have a greater
             impact than one influencer for a fraction of the cost.
           </p>
+          <row>
           <img
             src={require("../images/nanovertIcon.jpeg")}
             height="130"
             width="auto"
           ></img>
+
+          </row>
         </div>
       </Jumbotron>
 
@@ -269,11 +282,11 @@ function HomePage() {
                 />
                 <CardBody>
                   <CardTitle>
-                    <h3>Wait...</h3>
+                    <h3>Claim!</h3>
                   </CardTitle>
                   <CardText>
-                    Be patient, we will get in touch when businesses have offers
-                    available
+                    We'll email you and post on Instagram when businesses have offers
+                    available. 
                   </CardText>
                 </CardBody>
               </Card>
@@ -366,6 +379,7 @@ function HomePage() {
                 </CardBody>
               </Card>
             </Col>
+            
           </Row>
         </Container>
 
@@ -378,7 +392,7 @@ function HomePage() {
           style={{ width: "300px", margin: "auto", paddingBottom: "5%" }}
         >
           <FormGroup>
-            <Label for="Username">Username</Label>
+            <Label for="Username">Instagram Handle</Label>
             <InputGroup>
               <InputGroupAddon addonType="prepend">
                 <InputGroupText>@</InputGroupText>
@@ -392,6 +406,7 @@ function HomePage() {
               />
             </InputGroup>
           </FormGroup>
+          <p>Remember to follow @nanovertuk on Instagram and let us follow you back</p>
 
           <FormGroup>
             <Label for="firstname">First Name</Label>
@@ -416,7 +431,7 @@ function HomePage() {
           </FormGroup>
 
           <FormGroup>
-            <Label for="Email">Email</Label>
+            <Label for="Email">University Email</Label>
             <Input
               type="Email"
               name="Email"
