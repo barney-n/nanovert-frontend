@@ -60,11 +60,12 @@ function HomePage() {
 
         if (res.success === false) {
           setErrorMessage(res.message);
+          alert(res.message);
         } else {
           setErrorMessage("");
           history.push("/");
           alert(
-            "Signed Up! Remember to follow @nanovertuk on Instagram." +
+            "Signed Up! Remember to follow @nanovertuk on Instagram. " +
               username +
               " has been added."
           );
