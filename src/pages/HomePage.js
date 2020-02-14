@@ -201,17 +201,17 @@ function HomePage() {
             <WorkingWithCard
               imageSource={blackSheepIcon}
               vendorName="Black Sheep Coffee"
-              instagramLink="https://www.instagram.com/stories/highlights/17863516114654210/"
+              instagramLink="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3ODYzNTE2MTE0NjU0MjEw?igshid=11mo1ug1sjg3c"
             />
             <WorkingWithCard
               imageSource={whiterabbitIcon}
               vendorName="The White Rabbit Oxford"
-              instagramLink="https://www.instagram.com/stories/highlights/18085274344147476/"
+              instagramLink="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDg1Mjc0MzQ0MTQ3NDc2?igshid=102x4jqxlmtd2"
             />
             <WorkingWithCard
               imageSource={tripletwoIcon}
               vendorName="Triple Two Coffee"
-              instagramLink="https://www.instagram.com/stories/highlights/18022723339262727/"
+              instagramLink="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDIyNzIzMzM5MjYyNzI3?igshid=1r0ynsqhhcnqo"
             />
             <WorkingWithCard
               imageSource={manyMore}
