@@ -132,28 +132,57 @@ function HomePage() {
         <p>Connecting nano-influencers with local businesses.</p>
         <br />
         <div class="container">
+        <Container style={{ marginBottom: "3%", width: "70%" }}>
+          <Row>
+           
+
+        <Col>
+              <div>
+                <Button color="dark">
+                 <h1>
+                  <a
+                  href="#signup"
+                   style={{ textDecoration: "none", color: "white" }}
+                    >
+                  Sign up
+                  </a>
+                  </h1>
+                </Button>
+              </div>
+           
+           </Col>
+           </Row>
+           <br/>
+           <br/>
+           <Row>
+           <Col>
 
         
         <div>
         <Button color="dark">
           <h1>
             <a
-              href="#signup"
+              href="#about"
               style={{ textDecoration: "none", color: "white" }}
             >
-              Sign up
+              Learn more
             </a>
           </h1>
         </Button>
+        </div>
+       </Col>
+        </Row>
+        </Container>
+
         <br />
 
         
         </div>
-  </div>
+
 
       </Jumbotron>
 
-      <Jumbotron style={{ backgroundColor: "black", paddingTop: "0" }}>
+      <Jumbotron style={{ backgroundColor: "black", paddingTop: "0" }} id="about">
         <div>
           <h1>Tell Me More</h1>
           <br />
