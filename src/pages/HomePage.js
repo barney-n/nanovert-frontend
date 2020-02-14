@@ -160,14 +160,14 @@ function HomePage() {
         
         <div>
         <Button color="dark">
-          <h1>
+          <h2>
             <a
               href="#about"
               style={{ textDecoration: "none", color: "white" }}
             >
               Learn more
             </a>
-          </h1>
+          </h2>
         </Button>
         </div>
        </Col>
