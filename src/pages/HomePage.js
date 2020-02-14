@@ -9,15 +9,12 @@ import blackSheepIcon from "../images/blacksheepIcon.jpeg";
 import whiterabbitIcon from "../images/whiterabbitIcon.jpeg";
 import manyMore from "../images/manyMore.png";
 import tripletwoIcon from "../images/tripletwoIcon.png";
+import WorkingWithCard from "../components/WorkingWithCard";
+import InstructionCard from "../components/InstructionCard";
+import ShortcutButton from "../components/ShortcutButton";
+import LandingNavbar from "../components/LandingNavbar";
 
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
   Jumbotron,
   Button,
   Form,
@@ -28,13 +25,7 @@ import {
   InputGroupText,
   InputGroup,
   Container,
-  Row,
-  Col,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle
+  Row
 } from "reactstrap";
 
 function HomePage() {
@@ -91,36 +82,13 @@ function HomePage() {
         backgroundColor: "black"
       }}
     >
-      <Navbar dark sticky="top" style={{ backgroundColor: "black" }}>
-        <NavbarBrand
-          tag={Link}
-          to={"/"}
-          className="mr-auto"
-          style={{ fontSize: "30px" }}
-        >
-          nanovert
-        </NavbarBrand>
-        {/* <NavbarToggler
-          onClick={toggleNavbar}
-          className="mr-2"
-          style={{ borderColor: "white" }}
-        />
-        <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar> */}
-        {/* <NavItem> */}
-        <NavLink tag={Link} to={"/vendor-home"} style={{ color: "white" }}>
-          nanovert Vendor
-        </NavLink>
-        {/* </NavItem> */}
-        {/* </Nav>
-        </Collapse> */}
-      </Navbar>
+      <LandingNavbar />
 
       <Jumbotron
         style={{
-                  background: `url(${restaurant})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
+          background: `url(${restaurant})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
           height: "100vh",
           width: "auto",
           paddingTop: "9%"
@@ -132,57 +100,18 @@ function HomePage() {
         <p>Connecting nano-influencers with local businesses.</p>
         <br />
         <div class="container">
-        <Container style={{ marginBottom: "3%", width: "70%" }}>
-          <Row>
-           
-
-        <Col>
-              <div>
-                <Button color="dark">
-                 <h1>
-                  <a
-                  href="#signup"
-                   style={{ textDecoration: "none", color: "white" }}
-                    >
-                  Sign up
-                  </a>
-                  </h1>
-                </Button>
-              </div>
-           
-           </Col>
-           </Row>
-           <br/>
-           <br/>
-           <Row>
-           <Col>
-
-        
-        <div>
-        <Button color="dark">
-          <h2>
-            <a
-              href="#about"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Learn more
-            </a>
-          </h2>
-        </Button>
+          <Container style={{ marginBottom: "3%", width: "70%" }}>
+            <ShortcutButton linkTo="#signup" buttonText="Sign Up" />
+            <br />
+            <ShortcutButton linkTo="#about" buttonText="Learn More" />
+          </Container>
         </div>
-       </Col>
-        </Row>
-        </Container>
-
-        <br />
-
-        
-        </div>
-
-
       </Jumbotron>
 
-      <Jumbotron style={{ backgroundColor: "black", paddingTop: "0" }} id="about">
+      <Jumbotron
+        style={{ backgroundColor: "black", paddingTop: "0" }}
+        id="about"
+      >
         <div>
           <h1>Tell Me More</h1>
           <br />
@@ -215,12 +144,11 @@ function HomePage() {
             impact than one influencer for a fraction of the cost.
           </p>
           <row>
-          <img
-            src={require("../images/nanovertIcon.jpeg")}
-            height="130"
-            width="auto"
-          ></img>
-
+            <img
+              src={require("../images/nanovertIcon.jpeg")}
+              height="130"
+              width="auto"
+            ></img>
           </row>
         </div>
       </Jumbotron>
@@ -244,82 +172,23 @@ function HomePage() {
               paddingBottom: "5%"
             }}
           >
-            <Col style={{ width: "250px", marginBottom: "5px" }}>
-              <Card
-                style={{
-                  borderRadius: "30px",
-                  alignItems: "center",
-                  background: "rgba(1,1,1,0.6)",
-                  borderColor: "transparent"
-                }}
-              >
-                <CardImg
-                  width="100%"
-                  src={signup}
-                  style={{ width: "130px", marginTop: "10px" }}
-                />
-                <CardBody>
-                  <CardTitle>
-                    <h3>Sign Up</h3>
-                  </CardTitle>
-                  <CardText>
-                    Sign up using the form below and we'll add you to our
-                    database of nano-influencers.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Col>
-
-            <Col style={{ width: "250px", marginBottom: "5px" }}>
-              <Card
-                style={{
-                  borderRadius: "30px",
-                  alignItems: "center",
-                  background: "rgba(1,1,1,0.6)",
-                  borderColor: "transparent"
-                }}
-              >
-                <CardImg
-                  width="100%"
-                  src={connect}
-                  style={{ width: "130px", marginTop: "10px" }}
-                />
-                <CardBody>
-                  <CardTitle>
-                    <h3>Connect</h3>
-                  </CardTitle>
-                  <CardText>
-                    Follow @nanovertuk on Instagram and let us follow you back.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Col>
-
-            <Col style={{ width: "250px", marginBottom: "5px" }}>
-              <Card
-                style={{
-                  borderRadius: "30px",
-                  alignItems: "center",
-                  background: "rgba(1,1,1,0.6)",
-                  borderColor: "transparent"
-                }}
-              >
-                <CardImg
-                  width="100%"
-                  src={wait}
-                  style={{ width: "130px", marginTop: "10px" }}
-                />
-                <CardBody>
-                  <CardTitle>
-                    <h3>Claim!</h3>
-                  </CardTitle>
-                  <CardText>
-                    We'll email you and post on Instagram when businesses have offers
-                    available. 
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Col>
+            <InstructionCard
+              imageSource={signup}
+              titleText="Sign Up"
+              bodyText="Sign up using the form below and we'll add you to our
+                    database of nano-influencers."
+            />
+            <InstructionCard
+              imageSource={connect}
+              titleText="Connect"
+              bodyText="Follow @nanovertuk on Instagram and let us follow you back."
+            />
+            <InstructionCard
+              imageSource={wait}
+              titleText="Claim!"
+              bodyText="We'll email you and post on Instagram when businesses have
+              offers available."
+            />
           </Row>
         </Container>
       </div>
@@ -329,86 +198,25 @@ function HomePage() {
 
         <Container style={{ marginBottom: "3%", width: "70%" }}>
           <Row>
-            <Col>
-              <Card
-                style={{
-                  borderRadius: "30px",
-                  alignItems: "center",
-                  background: "transparent",
-                  borderColor: "transparent"
-                }}
-              >
-                <CardImg
-                  width="100%"
-                  src={blackSheepIcon}
-                  style={{ height: "130px", width: "auto", marginTop: "10px" }}
-                />
-                <CardBody>
-                  <CardTitle>Black Sheep Coffee</CardTitle>
-                </CardBody>
-              </Card>
-            </Col>
-
-            <Col>
-              <Card
-                style={{
-                  borderRadius: "30px",
-                  alignItems: "center",
-                  background: "transparent",
-                  borderColor: "transparent"
-                }}
-              >
-                <CardImg
-                  width="100%"
-                  src={whiterabbitIcon}
-                  style={{ height: "130px", width: "auto", marginTop: "10px" }}
-                />
-                <CardBody>
-                  <CardTitle>The White Rabbit Oxford</CardTitle>
-                </CardBody>
-              </Card>
-            </Col>
-
-            <Col>
-              <Card
-                style={{
-                  borderRadius: "30px",
-                  alignItems: "center",
-                  background: "transparent",
-                  borderColor: "transparent"
-                }}
-              >
-                <CardImg
-                  width="100%"
-                  src={tripletwoIcon}
-                  style={{ height: "130px", width: "auto", marginTop: "10px" }}
-                />
-                <CardBody>
-                  <CardTitle>Triple Two Coffee</CardTitle>
-                </CardBody>
-              </Card>
-            </Col>
-
-            <Col>
-              <Card
-                style={{
-                  borderRadius: "30px",
-                  alignItems: "center",
-                  background: "transparent",
-                  borderColor: "transparent"
-                }}
-              >
-                <CardImg
-                  width="100%"
-                  src={manyMore}
-                  style={{ height: "130px", width: "auto", marginTop: "10px" }}
-                />
-                <CardBody>
-                  <CardTitle>Many more to come!</CardTitle>
-                </CardBody>
-              </Card>
-            </Col>
-            
+            <WorkingWithCard
+              imageSource={blackSheepIcon}
+              vendorName="Black Sheep Coffee"
+              instagramLink="https://www.instagram.com/stories/highlights/17863516114654210/"
+            />
+            <WorkingWithCard
+              imageSource={whiterabbitIcon}
+              vendorName="The White Rabbit Oxford"
+              instagramLink="https://www.instagram.com/stories/highlights/18085274344147476/"
+            />
+            <WorkingWithCard
+              imageSource={tripletwoIcon}
+              vendorName="Triple Two Coffee"
+              instagramLink="https://www.instagram.com/stories/highlights/18022723339262727/"
+            />
+            <WorkingWithCard
+              imageSource={manyMore}
+              vendorName="Many more to come!"
+            />
           </Row>
         </Container>
 
@@ -435,7 +243,10 @@ function HomePage() {
               />
             </InputGroup>
           </FormGroup>
-          <p>Remember to follow @nanovertuk on Instagram and let us follow you back</p>
+          <p>
+            Remember to follow @nanovertuk on Instagram and let us follow you
+            back
+          </p>
 
           <FormGroup>
             <Label for="firstname">First Name</Label>
