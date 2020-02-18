@@ -37,41 +37,47 @@ function HomePage() {
   const [email, setEmail] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
   const [collapsed, setCollapsed] = React.useState(true);
+  const [policyTick, setPolicyTick] = React.useState(false);
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("https://nanovert-backend.herokuapp.com/user-signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        username,
-        firstname,
-        lastname,
-        email
+    if (policyTick) {
+      fetch("https://nanovert-backend.herokuapp.com/user-signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          username,
+          firstname,
+          lastname,
+          email
+        })
       })
-    })
-      .then(res => res.json())
-      .then(res => {
-        console.log(res);
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
 
-        if (res.success === false) {
-          setErrorMessage(res.message);
-          alert(res.message);
-        } else {
-          setErrorMessage("");
-          history.push("/");
-          alert(
-            "Signed Up! Remember to follow @nanovertuk on Instagram. " +
-              username +
-              " has been added."
-          );
-          window.location.reload(false);
-        }
-      });
+          if (res.success === false) {
+            setErrorMessage(res.message);
+            alert(res.message);
+            window.location.reload(false);
+          } else {
+            setErrorMessage("");
+            history.push("/");
+            alert(
+              "Signed Up! Remember to follow @nanovertuk on Instagram. " +
+                username +
+                " has been added."
+            );
+            window.location.reload(false);
+          }
+        });
+    } else {
+      alert("Sorry, you need to agree to our data policy to sign up.");
+    }
   }
 
   return (
@@ -284,8 +290,13 @@ function HomePage() {
 
           <FormGroup check>
             <Label check>
-              <Input type="checkbox" /> I agree nanovert can share my data with
-              its partners.
+              <Input
+                type="checkbox"
+                name="DataPolicy"
+                value={policyTick}
+                onChange={t => setPolicyTick(!policyTick)}
+              />{" "}
+              I agree nanovert can share my data with its partners.
             </Label>
           </FormGroup>
 
