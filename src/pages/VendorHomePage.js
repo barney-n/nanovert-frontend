@@ -42,7 +42,7 @@ function VendorHomePage() {
 
   React.useEffect(() => {
     if (token) {
-      fetch("https://nanovert-backend.herokuapp.com/vendor-home", {
+      fetch(process.env.BACKEND_STRING + "/vendor-home", {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then(res => res.json())
@@ -56,7 +56,7 @@ function VendorHomePage() {
 
   React.useEffect(() => {
     if (token) {
-      fetch("https://nanovert-backend.herokuapp.com/get-current-vendor", {
+      fetch(process.env.BACKEND_STRING + "/get-current-vendor", {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then(res => res.json())
@@ -67,7 +67,7 @@ function VendorHomePage() {
   }, [token]);
 
   function handleClaim(username, vendorname, datetime) {
-    fetch("https://nanovert-backend.herokuapp.com/log-claim", {
+    fetch(process.env.BACKEND_STRING + "/log-claim", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

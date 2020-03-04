@@ -30,7 +30,7 @@ function VendorSignupPage() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("https://nanovert-backend.herokuapp.com/vendor-signup", {
+    fetch(process.env.BACKEND_STRING + "/vendor-signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

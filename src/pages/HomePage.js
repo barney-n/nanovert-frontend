@@ -44,7 +44,7 @@ function HomePage() {
     e.preventDefault();
 
     if (policyTick) {
-      fetch("https://nanovert-backend.herokuapp.com/user-signup", {
+      fetch(process.env.BACKEND_STRING + "/user-signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
