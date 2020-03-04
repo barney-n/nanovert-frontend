@@ -67,11 +67,7 @@ function HomePage() {
           } else {
             setErrorMessage("");
             history.push("/");
-            alert(
-              "Signed Up! Remember to follow @nanovertuk on Instagram. " +
-                username +
-                " has been added."
-            );
+            alert("Signed Up! Remember to follow @nanovertuk on Instagram.");
             window.location.reload(false);
           }
         });
